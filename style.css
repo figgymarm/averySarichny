@@ -9,3 +9,18 @@
   display: flex;
   justify-content: center;
 }
+h1{
+  display: flex;
+  justify-content: center;
+}
+dt{
+  display: flex;
+  justify-content: center;
+}
+dd{
+  font-family: fantasy;
+  font-size: 18px;
+}
+dd:hover{
+  transform: translate(2); 
+}

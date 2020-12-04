@@ -31,10 +31,11 @@ $(() => {
       }).then(
         (data) => {
           //handler for success
-          console.log(data);
-          $('#weather').html(data.coord);
-          // $("#year").html(data.Year);
-          // $("#rated").html(data.Rated);
+          // console.log(data);
+          // console.log(data.weather);
+          $('#weather').html(data.weather[0].description);
+          $('#main').html(data.weather[0].main);
+          $('#icon').html(data.weather[0].icon);
         },
         (error) => {
           //handler for errors
