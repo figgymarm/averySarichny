@@ -18,19 +18,21 @@
 //GLOBAL VARIABLES
 //*************************
 
-$(() => {
 
+$(() => {
   $('form').on('submit', (event) => {
       event.preventDefault();
 
   const userInput = $('input[type="text"]').val();
   $.ajax({
-        url: "api.openweathermap.org/data/2.5/weather?q={city name}&appid={51229e8f6a4f05869a8f3b7e4be97541}",
+        url: "https://api.openweathermap.org/data/2.5/weather?q=London&appid=cbd693e99b02f7879da60ac109802e62",
+        type: "GET",
+        dataType: "JSONp"
       }).then(
         (data) => {
           //handler for success
           console.log(data);
-          // $("#title").html(data.Title);
+          $('#weather').html(data.coord);
           // $("#year").html(data.Year);
           // $("#rated").html(data.Rated);
         },
@@ -39,7 +41,5 @@ $(() => {
           console.log(`${error.statusText.toUpperCase()}: bad url`);
        }
      );
-   });
-
-
-})
+   })
+});

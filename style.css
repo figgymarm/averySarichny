@@ -1,0 +1,11 @@
+.banner{
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 25px;
+  font-style: oblique;
+}
+.form{
+  display: flex;
+  justify-content: center;
+}
