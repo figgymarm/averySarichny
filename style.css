@@ -1,3 +1,6 @@
+body{
+  background-color: lightcoral;
+}
 .banner{
   display: flex;
   justify-content: center;
@@ -9,6 +12,10 @@
   display: flex;
   justify-content: center;
 }
+input{
+  border: 4px solid gold;
+  border-radius: 10px;
+}
 h1{
   display: flex;
   justify-content: center;
@@ -18,9 +25,11 @@ dt{
   justify-content: center;
 }
 dd{
+  display: flex;
+  justify-content: center;
   font-family: fantasy;
   font-size: 18px;
 }
-dd:hover{
-  transform: translate(2); 
+#weather:hover{
+  color: maroon;
 }
