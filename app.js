@@ -19,8 +19,12 @@ $(() => {
     }).then(
       (data) => {
         //handler for success
+        const $weather = data.weather[0].description;
         $("#weather").html(data.weather[0].description);
-        $("#icon").html(data.main.temp);
+        $("#canvas").html(data.name);
+        if(weather.indexOf("rain") >= 0) {
+          skycons.set("animated-icon", Skycons.RAIN);
+        }
       },
       (error) => {
         //handler for errors

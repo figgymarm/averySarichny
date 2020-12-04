@@ -1,7 +1,7 @@
 *{
   border: 1px solid gold;
 }
-.page{
+.wrapper{
   background-color: aquamarine;
   font-family: 'Bodoni', sans-serif;
   border: 5px solid gold;
@@ -16,19 +16,14 @@
   font-size: 35px;
   font-style: oblique;
 }
-.form{
-  display: flex;
-  justify-content: center;
-}
-input{
-  border: 4px solid gold;
-  border-radius: 10px;
-  margin-bottom: 50px;
-}
 h1{
   font-family: 'Bodoni', sans-serif;
   display: flex;
   justify-content: center;
+}
+.animate__animated.animate__fadeIn{
+  --animate-duration: 6s;
+  color: darkblue;
 }
 .dataIcons{
   display: flex;
@@ -37,15 +32,19 @@ h1{
   font-size: 20px;
   margin: 15px;
 }
-/* #weather{
-  display: flex;
-  justify-content: center;
-  font-size: 18px; */
-}
 #weather:hover{
   color: maroon;
 }
-
+.form{
+  display: flex;
+  justify-content: center;
+}
+input{
+  border: 4px solid gold;
+  height: 35px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
 /*************************
 * Animation
 *************************/
