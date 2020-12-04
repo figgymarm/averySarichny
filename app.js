@@ -6,14 +6,6 @@
 //ON CLICK API FUNCTION
 //*************************
 
-//*************************
-//GLOBAL VARIABLES
-//*************************
-
-//*************************
-//GLOBAL VARIABLES
-//*************************
-
 $(() => {
   $("form").on("submit", (event) => {
     event.preventDefault();
@@ -28,9 +20,7 @@ $(() => {
       (data) => {
         //handler for success
         $("#weather").html(data.weather[0].description);
-        console.log(data);
-        $("#main").html(data.main.temp);
-        $("#icon").html(data.weather[0].icon);
+        $("#icon").html(data.main.temp);
       },
       (error) => {
         //handler for errors
