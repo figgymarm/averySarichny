@@ -1,11 +1,15 @@
-body{
+.page{
   background-color: lightcoral;
+  border: 5px solid goldenrod;
+  border-radius: 100px;
+  height: 100%;
+  width: 100%;
 }
 .banner{
   display: flex;
   justify-content: center;
   font-family: sans-serif;
-  font-size: 25px;
+  font-size: 35px;
   font-style: oblique;
 }
 .form{
@@ -17,8 +21,14 @@ input{
   border-radius: 10px;
 }
 h1{
+  font-family: 'Sansita Swashed', sans-serif;
   display: flex;
   justify-content: center;
+}
+.dataIcons{
+  display: flex;
+  justify-content: center;
+  height: 200px;
 }
 dt{
   display: flex;
