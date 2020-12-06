@@ -2,10 +2,12 @@ $(() => {
 //**********************************
 //     ON CLICK API FUNCTION
 //**********************************
+  const body = $('body');
+
   $("form").on("submit", (event) => {
     event.preventDefault();
 
-    const $userInput = $('input[type="text"]').val();
+    let $userInput = $('input[type="text"]').val();
     $.ajax({
       url: `https://api.openweathermap.org/data/2.5/weather?q=${$userInput}&appid=cbd693e99b02f7879da60ac109802e62`,
       type: "GET",
@@ -15,48 +17,21 @@ $(() => {
 //***********************************
 //     FUNCTIONS
 //***********************************
-        const $noRain = () => {
-        const $smiley = $("<img>", {
-          src: "imgs/smiley.png",
+        console.log(data);
+        const $cityInfo = $("#description").html(data.weather[0].description);
+        const $icon = $("<img>", {
+          src: `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
         });
-        $smiley.attr("width", "70px").attr("height", "100px");
-        $smiley.appendTo('#rainAnswer');
-      };
+        $('#rainAnswer').html($icon);
+        $('#input-box').val('');
+        if(data.weather[0].icon === "01d" || data.weather[0].icon === "02d"){
+          body.attr('style','background-color: red;')
+        }
 
-        const $someRain = () => {
-        const $raindrop = $("<img>", {
-          src: "imgs/raindrop.png",
-        });
-        $raindrop.attr("width", "70px").attr("height", "100px");
-        $raindrop.appendTo('#rainAnswer');
-      };
-        const $alert = () => {
-          alert(
-            `It's looking like ${data.weather[0].description} in ${$userInput} today.`)
-      };
 //************************************
 //     CONDITIONALS
 //************************************
-        const $cityInfo = $("#description").html(data.weather[0].description);
-        //condition for 50/50
-        if (
-          $cityInfo.text() === "cloudy" ||
-          "broken clouds" ||
-          "scattered clouds" ||
-          "overcast" ||
-          "mist" ||
-          "clouds"
-        ) {
-            $someRain();
-            $alert();
-          }
-        //condition for sun
-        else if($cityInfo.text() === "sunny"
-          || "partly sunny" || "clear sky" || "clear"
-        ) {
-            $noRain();
-            $alert();
-        };
+
       (error) => {
         //handler for errors
         console.log(`${error.statusText.toUpperCase()}: bad url`);

@@ -32,6 +32,14 @@ h1{
   height: 200px;
   font-size: 20px;
 }
+h2{
+  display: flex;
+  justify-content: center;
+}
+#description{
+  display: flex;
+  justify-content: center;
+}
 #rainAnswer{
   display: flex;
   justify-content: center;
@@ -53,9 +61,7 @@ input{
   border-radius: 10px;
   margin-bottom: 40px;
 }
-alert{
-  transition-delay: 2s;
-}
+
 /*************************
 * Animation
 *************************/
