@@ -1,8 +1,8 @@
-*{
+/* *{
   border: 1px solid gold;
-}
+} */
 body{
-  background-color: darkgrey;
+  background-image: url("imgs/catsanddogs.jpg");
 }
 .wrapper{
   background-color: cornflowerblue;
@@ -19,35 +19,48 @@ body{
   font-size: 2.5em;
   font-style: oblique;
 }
-h1{
+.banner>h1{
   font-family: 'Bodoni', sans-serif;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  margin-top: 150px;
 }
 .data{
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  height: 200px;
+  border: 5px dotted goldenrod;
+  background-color: darkblue;
+  color: yellow;
+  border-radius: 40px 40px 40px 40px;
+  height: 250px;
+  width: 400px;
+  margin-left: 22%;
   font-size: 20px;
 }
 h2{
   display: flex;
   justify-content: center;
+  font-size: 22px;
+}
+#icon{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 50px 50px 50px 50px;
+}
+#cityName{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-style: italic;
 }
 #description{
   display: flex;
   justify-content: center;
-}
-#rainAnswer{
-  display: flex;
-  justify-content: center;
-  width: 5%;
-  height: ;
+  align-items: flex-start;
+  font-style: italic;
 }
 #description:hover{
-  color: lightblue;
+  color: white;
   font-size: 1em;
   text-shadow: 7px;
 }

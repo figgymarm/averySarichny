@@ -15,23 +15,24 @@ $(() => {
     }).then(
       (data) => {
 //***********************************
-//     FUNCTIONS
+//     DATA ELEMENT
 //***********************************
-        console.log(data);
         const $cityInfo = $("#description").html(data.weather[0].description);
         const $icon = $("<img>", {
           src: `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
         });
-        $('#rainAnswer').html($icon);
+        const $city = $('#cityName').html(data.name)
+        console.log($cityInfo);
+        $('#icon').html($icon);
         $('#input-box').val('');
-        if(data.weather[0].icon === "01d" || data.weather[0].icon === "02d"){
-          body.attr('style','background-color: red;')
-        }
 
 //************************************
 //     CONDITIONALS
 //************************************
-
+        // if(data.weather[0].icon === "01d" || data.weather[0].icon === "02d"){
+        //   body.attr('style','background-image: url(https://i.pinimg.com/564x/d8/22/9f/d8229fa0904d498d137950875ebc935e.jpg);')
+        //   $('background-image').css('width','100%');
+        //   }
       (error) => {
         //handler for errors
         console.log(`${error.statusText.toUpperCase()}: bad url`);
