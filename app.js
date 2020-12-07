@@ -29,10 +29,10 @@ $(() => {
 //************************************
 //     CONDITIONALS
 //************************************
-        // if(data.weather[0].icon === "01d" || data.weather[0].icon === "02d"){
-        //   body.attr('style','background-image: url(https://i.pinimg.com/564x/d8/22/9f/d8229fa0904d498d137950875ebc935e.jpg);')
-        //   $('background-image').css('width','100%');
-        //   }
+        if(data.weather[0].icon === "01d" || data.weather[0].icon === "02d"){
+          body.attr('style','background-image: url(https://i.pinimg.com/564x/bd/0c/5a/bd0c5a28a49c2c16b0acbc440bbcb68b.jpg);')
+          $('background-image').css('width', 'stretch');
+          }
       (error) => {
         //handler for errors
         console.log(`${error.statusText.toUpperCase()}: bad url`);
