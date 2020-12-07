@@ -30,9 +30,21 @@ $(() => {
 //     CONDITIONALS
 //************************************
         if(data.weather[0].icon === "01d" || data.weather[0].icon === "02d"){
-          body.attr('style','background-image: url(https://i.pinimg.com/564x/bd/0c/5a/bd0c5a28a49c2c16b0acbc440bbcb68b.jpg);')
-          $('background-image').css('width', 'stretch');
-          }
+          body.attr('style','background-image: url(imgs/sunny.jpg);')
+          $('background-image').css('background-repeat', 'repeat');
+          $('.wrapper').css('background-image','linear-gradient(orangered, pink)');
+          $('.data').css('background-color','peachpuff');
+        }else if(data.weather[0].icon === "03d" ||data.weather[0].icon === "04d" || data.weather[0].icon === "50d"){
+          body.attr('style','background-image: url(imgs/clouds.jpg);')
+          $('background-image').css('background-repeat', 'repeat');
+          $('.wrapper').css('background-image','linear-gradient(grey, whitesmoke)');
+          $('.data').css('background-color','darkgray');
+        }else if(data.weather[0].icon === "11d" ||data.weather[0].icon === "10d" || data.weather[0].icon === "09d"){
+          body.attr('style','background-image: url(imgs/rain.jpg);')
+          $('background-image').css('background-repeat', 'repeat');
+          $('.wrapper').css('background-image','linear-gradient(chocolate, thistle)');
+          $('.data').css('background-color','rosybrown');
+        }
       (error) => {
         //handler for errors
         console.log(`${error.statusText.toUpperCase()}: bad url`);
