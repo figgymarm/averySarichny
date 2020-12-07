@@ -20,8 +20,10 @@ body{
 
 }
 .banner>h1{
+  display: flex;
+  justify-content: center;
   font-family: 'Bodoni', sans-serif;
-  margin-top: 40%;
+  margin: 40% 0 0 0;
 }
 .data{
   border: 5px solid gold;
@@ -60,12 +62,11 @@ h2{
 }
 #description:hover{
   color: white;
-  font-size: 1em;
-  text-shadow: 7px;
 }
 .form{
   display: flex;
   justify-content: center;
+  margin-left: 0 auto;
 }
 input{
   border: 4px solid yellow;
@@ -73,4 +74,7 @@ input{
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 40px;
+}
+@@media query {
+
 }
