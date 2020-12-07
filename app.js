@@ -44,6 +44,11 @@ $(() => {
           $('background-image').css('background-repeat', 'repeat');
           $('.wrapper').css('background-image','linear-gradient(chocolate, thistle)');
           $('.data').css('background-color','rosybrown');
+        }else if(data.weather[0].icon === "13d"){
+          body.attr('style','background-image: url(imgs/snow.jpg);')
+          $('background-image').css('background-repeat', 'repeat');
+          $('.wrapper').css('background-image','linear-gradient(chocolate, thistle)');
+          $('.data').css('background-color','rosybrown');
         }
       (error) => {
         //handler for errors
