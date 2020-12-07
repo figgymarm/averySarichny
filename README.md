@@ -1,4 +1,4 @@
-# Do I Need My Jacket ?
+# Do I Need a Jacket ?
 My first project that requires the following:
 <ul>
   <li>Create an application built with html, css, Javascript &amp; jQuery</li> 
