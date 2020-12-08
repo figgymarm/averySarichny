@@ -51,7 +51,7 @@ $(() => {
           $('.data').css('background-color','rosybrown');
         }
       (error) => {
-        //handler for errors
+        //handler for error
         console.log(`${error.statusText.toUpperCase()}: bad url`);
       }
   });
