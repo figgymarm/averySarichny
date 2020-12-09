@@ -13,3 +13,4 @@ the Javascript as clean as possible.</p>
   <li>Minor bug when changing between sunny days and other cities with different weather. Sometimes it changes, sometimes it does not.</li>
   <li>Would like to add animation to the box that displays the weather data.</li>
   </li>The responsive design isn't perfect when manually changing the browseer size.</li>
+</ul>
